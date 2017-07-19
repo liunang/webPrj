@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="foo@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="foo">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <table id="4" parent="2" name="t_login_log"/>
+    <table id="5" parent="2" name="t_user"/>
+    <column id="6" parent="4" name="login_log_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="7" parent="4" name="user_id">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="8" parent="4" name="ip">
+      <Position>3</Position>
+      <DataType>varchar(23)|0</DataType>
+    </column>
+    <column id="9" parent="4" name="login_datetime">
+      <Position>4</Position>
+      <DataType>varchar(19)|0</DataType>
+    </column>
+    <key id="10" parent="4" name="PRIMARY">
+      <ColNames>login_log_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="11" parent="5" name="user_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="12" parent="5" name="user_name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="13" parent="5" name="password">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+    </column>
+    <column id="14" parent="5" name="last_visit">
+      <Position>4</Position>
+      <DataType>varchar(19)|0</DataType>
+    </column>
+    <column id="15" parent="5" name="last_ip">
+      <Position>5</Position>
+      <DataType>varchar(23)|0</DataType>
+    </column>
+    <key id="16" parent="5" name="PRIMARY">
+      <ColNames>user_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
